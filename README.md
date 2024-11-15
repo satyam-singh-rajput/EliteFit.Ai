@@ -1,70 +1,81 @@
-# Getting Started with Create React App
+# Task Manager Application
+Live Demo link: https://satyamsinghelitefitai.netlify.app/
+## Overview
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The **Task Manager Application** is a simple yet powerful tool designed to help users organize, manage, and prioritize their daily tasks efficiently. Built with **React.js**, this application emphasizes core functionality and a user-friendly interface, ensuring that users can effortlessly add, edit, delete, search, and filter tasks. With features like task prioritization and categorization into upcoming, overdue, and completed tasks, the application provides a comprehensive overview of your to-do list.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- **Dashboard**: 
+  - Displays a categorized list of tasks including Upcoming, Overdue, and Completed tasks.
+- **Task Management**:
+  - **Add Tasks**: Create new tasks with a title, description, due date, and priority level.
+  - **Edit Tasks**: Modify existing tasks to update their details.
+  - **Delete Tasks**: Remove tasks that are no longer needed.
+- **Priority Levels**:
+  - Assign tasks with **High**, **Medium**, or **Low** priority to effectively manage workload.
+- **Search and Filter**:
+  - **Search**: Quickly find tasks using keywords.
+  - **Filter**: Narrow down tasks based on priority and completion status.
+- **Local Storage**:
+  - All tasks are stored locally in the browser, ensuring data persistence across sessions without the need for a backend server.
 
-### `npm start`
+## Technologies Used
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Frontend**:
+  - [React.js](https://reactjs.org/) - A JavaScript library for building user interfaces.
+- **State Management**:
+  - React's built-in `useState` and `useEffect` hooks.
+- **Styling**:
+  - CSS for styling components and ensuring a responsive design.
+- **Storage**:
+  - Browser's `localStorage` for data persistence.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Setup Instructions
 
-### `npm test`
+Follow the steps below to set up and run the Task Manager Application on your local machine.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Prerequisites
 
-### `npm run build`
+Ensure you have the following installed:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **Node.js** (v14 or higher recommended)
+- **npm** (comes with Node.js) or **yarn**
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Installation
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. **Clone the Repository**
 
-### `npm run eject`
+   ```bash
+   git clone https://github.com/your-username/task-manager.git
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+2. **Navigate to the Project Directory**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+   ```bash
+   cd task-manager
+3. **Install Dependencies**
+   using npm:
+   ```bash
+   npm install
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Running the Application
+Start the development server with the following command:
+  ```bash
+    npm start
+```
+This will launch the application in your default browser at http://localhost:3000. If it doesn't open automatically, you can manually navigate to the URL.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Usage
+1. **Adding a Task**: Fill in the Title, Description, Due Date, and Priority in the Add New Task form. Click the Add Task button to save the task.
+2. **Editing a Task**:Click the Edit button on the task you wish to modify. The task details will populate the form at the top. Make the necessary changes and click Update Task.
+3. **Deleting a Task**: Click the Delete button on the task you want to remove. Confirm the deletion in the prompt.
+4.  **Toggling Task Completion**: Click the checkbox next to a task to mark it as completed or pending.
+5. **Searching and Filtering**: Use the Search bar to find tasks by keywords. Use the Priority and Status dropdowns to filter tasks based on their priority level and completion status.
 
-## Learn More
+### Assumptions Made
+During the development of the Task Manager Application, the following assumptions were made:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1. **Single-User Application**: The application is designed for individual use without user authentication. All tasks are stored locally in the browser's localStorage.
+2. **Local Storage for Data Persistence**: Chose localStorage for simplicity and to avoid the complexity of setting up a backend server. This means tasks are only accessible on the device where they were created.
+3. **Unique Task Identification**:Used Date.now() to generate unique IDs for tasks. This approach assumes that tasks are not created simultaneously within the same millisecond.
+4. **Basic Styling**: Implemented a clean and simple UI using CSS without relying on external UI libraries to keep the project lightweight.
