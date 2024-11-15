@@ -1,0 +1,148 @@
+/* Container */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  /* Heading */
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Task Form */
+  .task-form {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+  }
+  
+  .task-form h2 {
+    margin-top: 0;
+  }
+  
+  .task-form div {
+    margin-bottom: 10px;
+  }
+  
+  .task-form label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .task-form input[type="text"],
+  .task-form input[type="date"],
+  .task-form select,
+  .task-form textarea {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+  }
+  
+  .task-form button {
+    padding: 10px 15px;
+    background-color: #007bff;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 3px;
+  }
+  
+  .task-form button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Search and Filter */
+  .search-filter {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .search-filter input[type="text"] {
+    flex: 1;
+  }
+  
+  .search-filter select {
+    padding: 8px;
+  }
+  
+  /* Dashboard */
+  .dashboard {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  /* Task List */
+  .task-list {
+    background-color: #f1f1f1;
+    padding: 15px;
+    border-radius: 5px;
+  }
+  
+  .task-list h3 {
+    margin-top: 0;
+  }
+  
+  /* Task Item */
+  .task-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: white;
+    padding: 10px;
+    border-radius: 3px;
+    margin-bottom: 10px;
+    border-left: 5px solid #007bff;
+  }
+  
+  .task-item.completed {
+    opacity: 0.6;
+    text-decoration: line-through;
+  }
+  
+  .task-item .task-actions button {
+    margin-left: 5px;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 3px;
+  }
+  
+  .task-item .task-actions button:first-child {
+    background-color: #28a745;
+    color: white;
+  }
+  
+  .task-item .task-actions button:first-child:hover {
+    background-color: #218838;
+  }
+  
+  .task-item .task-actions button:last-child {
+    background-color: #dc3545;
+    color: white;
+  }
+  
+  .task-item .task-actions button:last-child:hover {
+    background-color: #c82333;
+  }
+  
+  /* Responsive */
+  @media (max-width: 600px) {
+    .search-filter {
+      flex-direction: column;
+    }
+  
+    .task-item {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .task-item .task-actions {
+      margin-top: 10px;
+    }
+  }
+  
